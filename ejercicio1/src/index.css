@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #454545;
+}
+
+.year{
+  width: 100%;
+  max-width: 50%;
+  background: #6d6d6d;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin: auto;
+  margin-top: 10%;
+  border-radius: 5px;
+}
+
+.year > p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Incrementar{
+  border: none;
+  background: #0000ff;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.Decrementar{
+  border: none;
+  background: #ff0000;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+}
