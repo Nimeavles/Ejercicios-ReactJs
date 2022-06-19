@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif, monospace, Helvetica;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10% 13% 1fr;
+}
+
+.header {
+  background: #dfdfdf;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: 1/2;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.title {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.nav {
+  background: #001aff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.routes-nav {
+  list-style: none;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.routes-nav>a>li {
+  color: #fff;
+  font-size: 20px;
+}
+
+.main {
+  margin-top: 2%;
+  grid-row: 3/-1;
+  display: grid;
+  grid-template-rows: 5% 1fr;
+}
+
+.title-main {
+  text-align: center;
+}
+
+.loading {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  opacity: 0.8;
+}
+
+.LoaderBalls__item {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00f1ca;
+}
+
+.LoaderBalls__item:nth-child(1) {
+  animation: bouncing 0.4s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95);
+  margin-right: 10px;
+}
+
+.LoaderBalls__item:nth-child(2) {
+  margin-right: 10px;
+  animation: bouncing 0.4s 0.1s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
+}
+
+.LoaderBalls__item:nth-child(3) {
+  margin-right: 10px;
+  animation: bouncing 0.4s 0.2s alternate infinite cubic-bezier(0.6, 0.05, 0.15, 0.95) backwards;
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translate3d(0, 10px, 0) scale(1.2, 0.85);
+  }
+
+  100% {
+    transform: translate3d(0, -20px, 0) scale(0.9, 1.1);
+  }
+}
+
+.films {
+  margin-top: 2%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 20px;
+}
+
+.film {
+  border-radius: 5px;
+  height: 75%;
+  width: 70%;
+}
+
+.film-title {
+  width: 70%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.card-film {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width : 900px) {
+  .container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 13% 1fr;
+  }
+
+  .routes-nav {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .films {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+  }
+}
